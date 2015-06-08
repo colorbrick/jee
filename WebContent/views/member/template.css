@@ -1,0 +1,5 @@
+@CHARSET "UTF-8";
+@IMPORT url("father.css");    /* 상속 */
+	.trClass{border:1px solid black; height:50px;}
+	.tdClass1{border:3px solid #ff8080; text-align:center; background-color:#d832bb; color: white; width: 150px;}
+	.tdClass2{border:6px solid cyan; text-align:center;}

@@ -1,0 +1,14 @@
+@CHARSET "UTF-8";
+@IMPORT url("common.css");
+	
+article{
+	width: 100%;
+	min-height: 50%;
+	position: relative;
+	z-index: 10;
+	margin: -50px 0;
+	background-color: #FF7;
+}
+.content{
+	padding-top: 50px;
+}
