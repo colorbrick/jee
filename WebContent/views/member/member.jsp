@@ -6,7 +6,7 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 <style>
-	@IMPORT url("template.css");
+	@IMPORT url("member.css");
 </style>
 </head>
 <body>

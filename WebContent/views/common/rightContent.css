@@ -1,0 +1,35 @@
+@CHARSET "UTF-8";
+@IMPORT url("common.css");
+
+/* 좌측 사이드 */
+aside{
+	width: 30%;
+	min-height: 50%;
+	position: relative;
+	z-index: 10;
+	margin: -50px 0;
+	background-color: RED;
+	float: left;     /* float 는 떠있다는 뜻으로 우측정렬을 시키라는 뜻  */
+}
+.leftSide{
+	padding-top: 50px;
+}
+.topMenu{
+	float : right;
+	width : 40%;
+	height: 200px;
+}
+
+/* 우측 컨텐츠 */
+article{
+	width: 70%;
+	min-height: 50%;
+	position: relative;
+	z-index: 10;
+	margin: -50px 0;
+	background-color: #0080ff;
+	float: right;
+}
+.rightContent{
+	padding-top: 50px;
+}
