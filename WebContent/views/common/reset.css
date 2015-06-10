@@ -87,7 +87,7 @@ option {
 }
  
 hr {
-    display: none          /* 수평선 밑줄 없음  */
+    /* display: none  */         /* 수평선 밑줄 없음  */
 }
  
 legend {

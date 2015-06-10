@@ -14,7 +14,7 @@ footer {
     position: relative;
     z-index: 20;
     overflow: hidden;
-    background-color: #CCF
+    /* background-color: #CCF */
 }
 nav ul {
     list-style:none;
