@@ -10,16 +10,14 @@
 	</style>
 </head>
 <body>
-	<header>
-		<h3>헤더</h3>	
-	</header>
+<div id="wrap">
+	<jsp:include page="header.jsp" />
 	<article>
 		<section class="content">
 			<h3>콘텐츠</h3>
 		</section>
 	</article>
-	<footer>
-		<h3>푸터</h3>
-	</footer>
+</div>
+	<jsp:include page="footer.jsp" />
 </body>
 </html>

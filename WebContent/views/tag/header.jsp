@@ -6,7 +6,7 @@
 	<meta charset="UTF-8" />
 	<title>헤더 샘플</title>
 	<style>
-	@import url("header.css");
+	@import url("<%=request.getContextPath()%>/css/header.css");
 	</style>
 </head>
 <body>

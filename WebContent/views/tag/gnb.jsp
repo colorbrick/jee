@@ -6,7 +6,7 @@
 	<meta charset="UTF-8" />
 	<title>GNB</title>
 	<style>
-		@IMPORT url("gnb.css");
+		@IMPORT url("<%=request.getContextPath()%>/css/gnb.css");
 	</style>
 </head>
 <body>

@@ -6,7 +6,8 @@
 	<meta charset="UTF-8" />
 	<title>Left Content Frame</title>
 	<style>
-		@IMPORT url("leftContent.css");
+		@IMPORT url("<%=request.getContextPath()%>/css/leftContent.css");
+		
 	</style>
 </head>
 <body>

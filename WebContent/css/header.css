@@ -1,5 +1,5 @@
 @CHARSET "UTF-8";
-@import url("../common/common.css");
+@import url("common.css");
 
 img{border:none;}
 
@@ -9,7 +9,7 @@ img{border:none;}
 	margin: 0;
 	margin-right: auto; /* 환경에 맞게 자동 설정 */
 	margin-left: auto;
-	background-image: url("../../images/Hydrangeas.jpg");
+	background-image: url("../images/Hydrangeas.jpg");
 	background-repeat: repeat-y; /* 만약 배경 이미지가 작으면 이미지 반복으로 채우겠다 */
 	min-height: 750px; 
 	/* 모니터에 따라 신축성 있게 헤더가 축소되지만 최소 750px은 유지하고  
