@@ -1,4 +1,191 @@
-@import url( listTab.css );
+/* @import url( listTab.css ); */
+
+html {
+	margin: 0px; padding: 0px; height: 100%; color: rgb(102, 102, 102); font-family: "나눔고딕","NanumGothicRegular",Dotum,Gulim,Helvetica,"Apple SD Gothic Neo",AppleGothic,Sans-serif,Arial; font-size: 12px;
+}
+body {
+	margin: 0px; padding: 0px; height: 100%; color: rgb(102, 102, 102); font-family: "나눔고딕","NanumGothicRegular",Dotum,Gulim,Helvetica,"Apple SD Gothic Neo",AppleGothic,Sans-serif,Arial; font-size: 12px; background-color: rgb(249, 249, 249);
+}
+div {
+	margin: 0px; padding: 0px; position: relative;
+}
+
+form {
+	margin: 0px; padding: 0px;
+}
+fieldset {
+	margin: 0px; padding: 0px; border: 0px currentColor; border-image: none;
+}
+legend {
+	margin: 0px; padding: 0px; line-height: 0; visibility: hidden;
+}
+#wrapper {
+	margin: 0px; padding: 0px; width: 100%;
+}
+#header {
+	margin: 0px; padding: 0px; width: 100%; height: 70px; position: relative; z-index: 10; background-color: #000000;
+}
+#header > .top-container {
+	width: 100%; height: 70px; min-width: 990px; background-repeat: repeat-x;
+}
+#header > .top-container > div.sub-bg {
+	left: 0px; top: 70px; width: 100%; height: 45px; border-bottom-color: rgb(208, 208, 208); border-bottom-width: 1px; border-bottom-style: solid; display: none; position: absolute; min-width: 990px; background-color: rgb(255, 255, 255);
+}
+#header > .top-container > .top {
+	margin: 0px auto; width: 100%; min-width: 990px; max-width: 1220px;
+}
+#header > .top-container > .top > #logo {
+	margin-left: 10px; display: inline-block; -ms-zoom: 1;
+}
+#header > .top-container > .top > #gnb {
+	left: 130px; top: 28px; vertical-align: middle; display: block; position: absolute; -ms-zoom: 1;
+}
+#header > .top-container > .top > #gnb > ul > li {
+	margin-right: 18px; float: left; display: block;
+}
+#header > .top-container .top > div.right {
+	top: 0px; right: 10px; display: block; position: absolute;
+}
+#header > .top-container > .top > div.right > div.right-sub {
+	color: rgb(196, 196, 196); margin-top: 24px; margin-right: 70px; vertical-align: top; display: inline-block; -ms-zoom: 1;
+}
+#header > .top-container > .top > div.right > div.right-sub > #login {
+	top: 1px; margin-right: 8px; display: inline-block; position: relative; -ms-zoom: 1;
+}
+#header > .top-container > .top > div.right > div.right-sub > .loggedin#login {
+	top: 0px;
+}
+#header > .top-container > .top > div.right > div.right-sub > #login > a + a {
+	margin-left: 0px;
+}
+#header > .top-container > .top > div.right > div.right-sub > #login > dl.logout {
+	margin-right: 7px; position: relative;
+}
+#header > .top-container > .top > div.right > div.right-sub > #login > dl.logout {
+	display: inline-block; -ms-zoom: 1;
+}
+#header > .top-container > .top > div.right > div.right-sub > #login > dl.logout > dt {
+	display: inline-block; -ms-zoom: 1;
+}
+#header > .top-container > .top > div.right > div.right-sub > #login > dl.logout > dd {
+	display: inline-block; -ms-zoom: 1;
+}
+#header > .top-container > .top > div.right > div.right-sub > #login > dl.logout dt {
+	font-size: 11px; 
+}
+#header > .top-container > .top > div.right > div.right-sub > #login > dl.logout > dt > label.user-id {
+	color: #c0c0c0; font-style: inherit;
+}
+#header > .top-container > .top > div.right > div.right-sub > #login > dl.logout > dt > label.user-pw {
+	color: #c0c0c0; font-style: inherit;
+}
+#header > .top-container > .top > div.right > div.right-sub > #login > dl.logout > dd.user-id {
+	margin-right: -3px;
+}
+#header > .top-container > .top > div.right > div.right-sub > #login > a.img-logout > img {
+	vertical-align: text-bottom;
+}
+#header > .top-container > .top > #logo > h1 {
+	margin-top: 19px; margin-right: 31px; display: inline-block; -ms-zoom: 1;
+}
+#header > .top-container > .top > #gnb > ul > li.on {
+	background: url("/Content/images/Common/header/Gnb/gnb_d1_triangle.png") no-repeat 50% 100%;
+}
+#header > .top-container > .top > #gnb > ul > li > a {
+	height: 42px; text-align: center; color: rgb(196, 196, 196); font-size: 18px; font-weight: bold; display: block;
+}
+#header > .top-container > .top > #gnb > ul > li > a span {
+	padding: 2px 2px 4px;
+}
+
+#container > #content > #main-shortCut {
+	min-width: 990px;
+}
+#container > #content > #main-shortCut > .sub-main-section {
+	margin: 0px auto; width: 990px; min-height: 104px;
+}
+#container > #content > #main-shortCut > .main-section {
+	margin: 0px auto; width: 990px; min-height: 104px;
+}
+.page-type3 {
+	margin-top: 60px;
+}
+.private-info{position:relative;}
+.page-type3 > h2 {
+	color: rgb(136, 136, 136); letter-spacing: -1px; font-family: "NanumGothicBold"; font-size: 36px; margin-bottom: 28px; text-align: center;
+}
+.page-type3 > h2 > p {
+	font-family: "NanumGothicBold"; font-size: 17px; margin-bottom: 9px; text-align: center;
+}
+.page-type3 > h2 > span {
+	color: rgb(51, 51, 51); text-align: center;
+}
+.radio-common {margin-left:12px;margin-right:5px;position:relative;top:2px;}
+.c91500000 div.input-box dl {margin:15px 0;}
+
+
+div.cirtifi-box {width:1050px;margin:0 auto;}
+.private-info > .focus-info1.have_table {height:220px;}
+.margin-top5 {
+	margin-top: 5px;
+}
+.margin-top10 {
+	margin-top: 10px;
+}
+.margin-top15 {
+	margin-top: 15px;
+}
+.margin-top40 {
+	margin-top: 40px;
+}
+.margin-top45 {
+	margin-top: 45px;
+}
+.margin-top50 {
+	margin-top: 50px;
+}
+.margin-bottom10 {
+	margin-bottom: 10px;
+}
+.margin-bottom50 {
+	margin-bottom: 50px;
+}
+div.center-btn{margin-top:38px;}
+
+.button {
+	text-align: center; vertical-align: middle; display: inline-block; -ms-zoom: 1;
+}
+.input-section {width:950px;margin:0 auto;}
+.clear_both {
+	clear: both;
+}
+.line-ccc {
+	width: 100%; height: 1px; background-color: rgb(204, 204, 204);
+}
+.line-e2e2e2 {
+	width: 100%; height: 1px; background-color: rgb(226, 226, 226);
+}
+div.input-box {
+	margin: 0px auto;
+}
+div.input-box dt {
+	width: 120px; color: rgb(32, 32, 32); font-size: 13px; font-weight: 600; margin-top: 7px; float: left;
+}
+.c91500000 div.input-box .dt-margin-top1 {margin-top:1px;} 
+.c91500000 div.input-box .dt-valign-top {margin-top:2px;} 
+.c91500000 h4 {text-align:left;font-size:17px;font-weight:600;float:left;width:100px;}
+.c91500000 div.input-box dd {margin-left:140px;padding:5px 0;}
+.c91500000 div.input-box dd p {line-height:1.5em;}
+
+div.input-box {width:470px;margin:0 auto;}
+div.input-box dt {float:left;width:110px;font-size:13px;color:#202020;font-weight:600;margin-top:8px;}
+
+
+
+
+
+
+
 @font-face {
 	font-family: NanumGothicRegular;
 	src: url(font/NanumGothic-Regular.eot);
@@ -11,12 +198,7 @@
 	font-family: NanumGothicExtraBold;
 	src: url(font/NanumGothicExtraBold.eot?#iefix) format("embedded-opentype"), url(font/NanumGothicExtraBold.woff) format("woff"), url(font/NanumGothicExtraBold.ttf) format("truetype"), url(font/NanumGothicExtraBold.svg#svgFontName) format("svg");
 }
-html {
-	margin: 0px; padding: 0px; height: 100%; color: rgb(102, 102, 102); font-family: "��������","NanumGothicRegular","����",Dotum,"����",Gulim,Helvetica,"Apple SD Gothic Neo",AppleGothic,Sans-serif,Arial; font-size: 12px;
-}
-body {
-	margin: 0px; padding: 0px; height: 100%; color: rgb(102, 102, 102); font-family: "��������","NanumGothicRegular","����",Dotum,"����",Gulim,Helvetica,"Apple SD Gothic Neo",AppleGothic,Sans-serif,Arial; font-size: 12px;
-}
+
 dl {
 	margin: 0px; padding: 0px;
 }
@@ -56,12 +238,6 @@ h6 {
 pre {
 	margin: 0px; padding: 0px;
 }
-form {
-	margin: 0px; padding: 0px;
-}
-fieldset {
-	margin: 0px; padding: 0px;
-}
 input[type=text] {
 	margin: 0px; padding: 0px;
 }
@@ -95,8 +271,8 @@ select {
 button {
 	color: rgb(102, 102, 102); font-size: 12px;
 }
-table {
-	border: 0px currentColor; border-image: none; border-collapse: collapse; border-spacing: 0;
+div table {
+	border: 1px; currentColor; border-image: none; border-collapse: collapse; border-spacing: 0; width: 1000px
 }
 ol {
 	list-style: none;
@@ -131,20 +307,12 @@ hr {
 img {
 	border: 0px currentColor; border-image: none;
 }
-fieldset {
-	border: 0px currentColor; border-image: none;
-}
-div {
-	margin: 0px; padding: 0px; position: relative;
-}
+
 b {
 	
 }
 strong {
 	
-}
-legend {
-	margin: 0px; padding: 0px; line-height: 0; visibility: hidden;
 }
 caption {
 	margin: 0px; padding: 0px; line-height: 0; visibility: hidden;
@@ -189,10 +357,10 @@ a:active {
 	color: rgb(249, 117, 0);
 }
 .family-dotum {
-	letter-spacing: -1px; font-family: "����",Dotum;
+	letter-spacing: -1px; font-family: "����",Dotum;
 }
 .family-dotum-normal {
-	font-family: "����",Dotum; font-weight: 400;
+	font-family: "����",Dotum; font-weight: 400;
 }
 .font-extraBold {
 	font-family: "NanumGothicExtraBold";
@@ -200,18 +368,10 @@ a:active {
 .font-NGBold {
 	font-family: "NanumGothicBold";
 }
-body {
-	background-color: rgb(249, 249, 249);
-}
 body.ie7 {
 	cursor: default; background-color: rgb(249, 249, 249);
 }
-#wrapper {
-	margin: 0px; padding: 0px; width: 100%;
-}
-#header {
-	margin: 0px; padding: 0px; width: 100%; height: 90px; position: relative; z-index: 10;
-}
+
 #container {
 	margin: 0px auto; top: -20px; width: 100%; position: relative;
 }
@@ -221,42 +381,14 @@ body.ie7 {
 #footer::after {
 	height: 0px; clear: both; font-size: 0px; display: block; visibility: hidden; content: "";
 }
-#header > .top-container {
-	width: 100%; height: 70px; min-width: 990px; background-image: url("/Content/images/Common/top_container_bg.png"); background-repeat: repeat-x;
-}
-#header > .top-container > div.sub-bg {
-	left: 0px; top: 70px; width: 100%; height: 45px; border-bottom-color: rgb(208, 208, 208); border-bottom-width: 1px; border-bottom-style: solid; display: none; position: absolute; min-width: 990px; background-color: rgb(255, 255, 255);
-}
+
 #header > .top-container > div.on.sub-bg {
 	display: block;
-}
-#header > .top-container > .top {
-	margin: 0px auto; width: 100%; min-width: 990px; max-width: 1220px;
 }
 .mobile #header > .top-container > .top {
 	max-width: 990px;
 }
-#header > .top-container > .top > #logo {
-	margin-left: 10px; display: inline-block; -ms-zoom: 1;
-}
-#header > .top-container > .top > #logo > h1 {
-	margin-top: 19px; margin-right: 31px; display: inline-block; -ms-zoom: 1;
-}
-#header > .top-container > .top > #gnb {
-	left: 130px; top: 28px; vertical-align: middle; display: block; position: absolute; -ms-zoom: 1;
-}
-#header > .top-container > .top > #gnb > ul > li {
-	margin-right: 18px; float: left; display: block;
-}
-#header > .top-container > .top > #gnb > ul > li.on {
-	background: url("/Content/images/Common/header/Gnb/gnb_d1_triangle.png") no-repeat 50% 100%;
-}
-#header > .top-container > .top > #gnb > ul > li > a {
-	height: 42px; text-align: center; color: rgb(196, 196, 196); font-size: 18px; font-weight: bold; display: block;
-}
-#header > .top-container > .top > #gnb > ul > li > a span {
-	padding: 2px 2px 4px;
-}
+
 #header > .top-container > .top > #gnb > ul > li:hover {
 	background: url("/Content/images/Common/header/Gnb/gnb_d1_triangle.png") no-repeat 50% 100%;
 }
@@ -308,45 +440,7 @@ body.ie7 {
 #header > .top-container .top > div.right {
 	
 }
-#header > .top-container .top > div.right {
-	top: 0px; right: 10px; display: block; position: absolute;
-}
-#header > .top-container > .top > div.right > div.right-sub {
-	color: rgb(196, 196, 196); margin-top: 24px; margin-right: 70px; vertical-align: top; display: inline-block; -ms-zoom: 1;
-}
-#header > .top-container > .top > div.right > div.right-sub > #login {
-	top: 1px; margin-right: 8px; display: inline-block; position: relative; -ms-zoom: 1;
-}
-#header > .top-container > .top > div.right > div.right-sub > .loggedin#login {
-	top: 0px;
-}
-#header > .top-container > .top > div.right > div.right-sub > #login > a + a {
-	margin-left: 0px;
-}
-#header > .top-container > .top > div.right > div.right-sub > #login > dl.logout {
-	margin-right: 7px; position: relative;
-}
-#header > .top-container > .top > div.right > div.right-sub > #login > dl.logout {
-	display: inline-block; -ms-zoom: 1;
-}
-#header > .top-container > .top > div.right > div.right-sub > #login > dl.logout > dt {
-	display: inline-block; -ms-zoom: 1;
-}
-#header > .top-container > .top > div.right > div.right-sub > #login > dl.logout > dd {
-	display: inline-block; -ms-zoom: 1;
-}
-#header > .top-container > .top > div.right > div.right-sub > #login > dl.logout dt {
-	font-size: 11px;
-}
-#header > .top-container > .top > div.right > div.right-sub > #login > dl.logout > dt > label.user-id {
-	background: url("/Content/images/Common/header/Gnb/gnb_id.png") no-repeat 0px 0px; left: 17px; top: 2px; width: 14px; height: 9px; color: transparent; text-indent: -10000px; display: block; position: relative;
-}
-#header > .top-container > .top > div.right > div.right-sub > #login > dl.logout > dt > label.user-pw {
-	background: url("/Content/images/Common/header/Gnb/gnb_pw.png") no-repeat 0px 0px; left: 21px; top: 2px; width: 19px; height: 9px; color: transparent; text-indent: -10000px; display: block; position: relative;
-}
-#header > .top-container > .top > div.right > div.right-sub > #login > dl.logout > dd.user-id {
-	margin-right: -17px;
-}
+
 #header > .top-container > .top > div.right > div.right-sub > #login > dl.logout > dd > div.input-wrapper {
 	border-style: none none solid; border-bottom-color: rgb(68, 68, 68); border-bottom-width: 1px;
 }
@@ -361,9 +455,6 @@ body.ie7 {
 }
 #header #login a {
 	color: rgb(186, 186, 186); font-weight: 800;
-}
-#header > .top-container > .top > div.right > div.right-sub > #login > a.img-logout > img {
-	vertical-align: text-bottom;
 }
 #header > .top-container > .top > div.right > div.right-sub > #login > dl.login {
 	top: 4px; margin-right: 15px; position: relative;
@@ -494,15 +585,8 @@ body.ie7 {
 .ie7 #container {
 	cursor: default;
 }
-#container > #content > #main-shortCut {
-	min-width: 990px;
-}
-#container > #content > #main-shortCut > .main-section {
-	margin: 0px auto; width: 990px; min-height: 104px;
-}
-#container > #content > #main-shortCut > .sub-main-section {
-	margin: 0px auto; width: 990px; min-height: 104px;
-}
+
+
 #container > #content > #main-shortCut .sub-title {
 	margin-bottom: 20px;
 }
@@ -527,6 +611,9 @@ body.ie7 {
 .page-type2 {
 	margin-top: 60px;
 }
+.page-type4 > h4 {
+	color: rgb(136, 136, 136); letter-spacing: -1px; font-size: 18px; font-weight: 600; margin-bottom: 18px;
+}
 .page-type2 > h2 {
 	color: rgb(136, 136, 136); letter-spacing: -1px; font-size: 36px; font-weight: 600; margin-bottom: 18px;
 }
@@ -541,18 +628,6 @@ body.ie7 {
 }
 .page-type2 > div.desc > p {
 	color: rgb(51, 51, 51); font-size: 15px; font-weight: 600; margin-bottom: 8px;
-}
-.page-type3 {
-	margin-top: 60px;
-}
-.page-type3 > h2 {
-	color: rgb(136, 136, 136); letter-spacing: -1px; font-family: "NanumGothicBold"; font-size: 36px; margin-bottom: 28px;
-}
-.page-type3 > h2 > p {
-	font-family: "NanumGothicBold"; font-size: 17px; margin-bottom: 9px;
-}
-.page-type3 > h2 > span {
-	color: rgb(51, 51, 51);
 }
 #footer {
 	padding: 150px 0px 0px;
@@ -622,9 +697,6 @@ div.player-btn_w150_h85 {
 }
 div.player-btn_w150_h215 {
 	background: url("/Content/images/Movie/player_btn_50.png") no-repeat 0px 0px; left: 50px; top: 82px; width: 50px; height: 50px; line-height: 0; text-indent: -2000px; overflow: hidden; font-size: 0px; position: absolute;
-}
-.button {
-	text-align: center; vertical-align: middle; display: inline-block; -ms-zoom: 1;
 }
 .button-list b {
 	background: url("/Content/images/Common/button_list_bg.png") no-repeat left; padding-left: 15px;
@@ -842,9 +914,7 @@ button.button {
 .dotted_line_5x1_c666_png {
 	background: url("/Content/images/Common/dotted_line_5x1_c666.png") repeat-x; width: 100%; height: 1px;
 }
-.line-ccc {
-	width: 100%; height: 1px; background-color: rgb(204, 204, 204);
-}
+
 .line-dcdcdc {
 	width: 100%; height: 1px; background-color: rgb(220, 220, 220);
 }
@@ -854,9 +924,7 @@ button.button {
 .line_e2e2e2 {
 	width: 100%; height: 1px; background-color: rgb(226, 226, 226);
 }
-.line-e2e2e2 {
-	width: 100%; height: 1px; background-color: rgb(226, 226, 226);
-}
+
 .line_c999 {
 	width: 100%; height: 1px; background-color: rgb(153, 153, 153);
 }
@@ -905,12 +973,6 @@ input[type=text].input-box {
 input[type=password].input-box {
 	padding: 6px 9px; border: 1px solid rgb(204, 204, 204); border-image: none; width: 150px; height: 16px; color: rgb(102, 102, 102); line-height: 16px; font-size: 12px; vertical-align: bottom; background-color: rgb(255, 255, 255);
 }
-div.input-box {
-	margin: 0px auto;
-}
-div.input-box dt {
-	width: 120px; color: rgb(32, 32, 32); font-size: 13px; font-weight: 600; margin-top: 7px; float: left;
-}
 .mid-hyphen {
 	margin: 0px 1px; top: -3px; width: 5px; border-top-color: rgb(51, 51, 51); border-top-width: 1px; border-top-style: solid; display: inline-block; position: relative;
 }
@@ -938,26 +1000,17 @@ div.input-box dt {
 .margin-top0 {
 	margin-top: 0px;
 }
-.margin-top5 {
-	margin-top: 5px;
-}
 .margin-top8 {
 	margin-top: 8px;
 }
 .margin-top9 {
 	margin-top: 9px;
 }
-.margin-top10 {
-	margin-top: 10px;
-}
 .margin-top12 {
 	margin-top: 12px;
 }
 .margin-top13 {
 	margin-top: 13px;
-}
-.margin-top15 {
-	margin-top: 15px;
 }
 .margin-top18 {
 	margin-top: 18px;
@@ -977,17 +1030,8 @@ div.input-box dt {
 .margin-top35 {
 	margin-top: 35px;
 }
-.margin-top40 {
-	margin-top: 40px;
-}
 .margin-top44 {
 	margin-top: 44px;
-}
-.margin-top45 {
-	margin-top: 45px;
-}
-.margin-top50 {
-	margin-top: 50px;
 }
 .margin-top55 {
 	margin-top: 55px;
@@ -1049,9 +1093,7 @@ div.input-box dt {
 .margin-bottom5 {
 	margin-bottom: 5px;
 }
-.margin-bottom10 {
-	margin-bottom: 10px;
-}
+
 .margin-bottom12 {
 	margin-bottom: 12px;
 }
@@ -1087,9 +1129,6 @@ div.input-box dt {
 }
 .margin-bottom45 {
 	margin-bottom: 45px;
-}
-.margin-bottom50 {
-	margin-bottom: 50px;
 }
 .margin-bottom60 {
 	margin-bottom: 60px;
@@ -1148,9 +1187,7 @@ div.input-box dt {
 .margin-right10 {
 	margin-right: 10px;
 }
-.clear_both {
-	clear: both;
-}
+
 .ellipsis {
 	overflow: hidden; white-space: nowrap; -ms-text-overflow: ellipsis;
 }
@@ -1176,7 +1213,7 @@ div.input-box dt {
 	color: rgb(204, 204, 204);
 }
 button {
-	background: none; margin: 0px; padding: 0px; border: 0px currentColor; border-image: none; overflow: visible; font-family: "��������","NanumGothicRegular"; display: inline-block; cursor: pointer;
+	background: none; margin: 0px; padding: 0px; border: 0px currentColor; border-image: none; overflow: visible; font-family: "�������","NanumGothicRegular"; display: inline-block; cursor: pointer;
 }
 .loading {
 	background: url("/Content/images/Common/loading.png") no-repeat 50% !important;
@@ -1304,3 +1341,284 @@ div.right-wing > ul > li.wing-top {
 .box-polaroid .box-inner > ul > li > dl > dt span {
 	margin-bottom: 3px; display: inline-block;
 }
+
+@charset "utf-8";
+***************************************************************************
+*   style_9140.css
+*
+*	회원가입 > 회원가입 선택 (메뉴코드 91400000)
+***************************************************************************
+
+회원유형 선택
+.c91400000 div.mem-join-block ul {margin:40px 0 55px;}
+.c91400000 div.mem-join-block ul li:first-child {font-size:24px; font-family: 'NanumGothicBold';color:#333;margin:5px 0 25px;}
+
+
+***************************************************************************
+*	회원가입 > 약관동의 (메뉴코드 91404000)
+***************************************************************************
+
+.c91404000 div.cur-point {left:120px;.left:135px;} 현재 스탭 알림 화살표 위치
+.c91404000 div.cur-point.step5{left:99px;}
+
+
+div.private-info, div.service-policy {border:1px solid #ccc;padding:20px 30px; height:180px;overflow: auto;line-height:1.5em;background:#fff;}
+
+.c91404000 h4, .c91402010 h4.under14parent  {font-family:'NanumGothicExtraBold';font-size:17px;font-weight:500;color:#333; text-align: left; } 개인정보수집 및 활용동의, 프리머스 서비스 이용약관 title
+
+
+
+.c91404000 label {font-size:13px;font-weight:600;}
+.c91404000 input[type=checkbox] {vertical-align:middle; margin:4px 5px 5px 0;}
+
+.c91404000 h5, .c91402010 h5 {margin:20px 0;} 개인정보, 약관 헤더
+.c91404000 h5:first-child, , .c91402010 h5:first-child {margin-top:10px;}
+
+.service-policy dt {float:left;margin-right:3px;}
+.service-policy dd {margin-left:15px;}
+.c91404000 h6, .c91402010 h6 {margin:10px 0;} 약관 서브 헤더
+.c91404000 .sub-dl, .c91402010 .sub-dl {margin-left:30px;}
+.c91404000 .sub-dd, .c91402010 .sub-dl {padding-left:30px;}
+
+정보 텍스트 박스 상하단 가림
+.c91404000 .bar {width:98%;height:15px;background:#fff;position:relative;}
+.c91404000 .topbar-private {top:-221px;left:1px;}
+.c91404000 .bottombar-private {top:-31px;left:1px;}
+.c91404000 .topbar-policy {top:-221px;left:1px;}
+.c91404000 .bottombar-policy {top:-31px;left:1px;}
+
+.button {cursor:pointer}
+
+
+***************************************************************************
+*	회원가입 > 일반 본인인증 (메뉴코드 91401000)
+***************************************************************************
+
+.c91401000 div.cur-point {left:365px;.left:375px;} 현재 스탭 알림 화살표 위치
+
+
+
+***************************************************************************
+*	회원가입 > 14세미만 본인인증 (메뉴코드 91402000)
+***************************************************************************
+
+.c91402000 div.cur-point {left:295px;.left:305px;} 현재 스탭 알림 화살표 위치
+
+
+***************************************************************************
+*	회원가입 > 14세미만 보호자동의 (메뉴코드 91402010)
+***************************************************************************
+
+.c91402010 div.cur-point {left:490px;.left:500px;} 현재 스탭 알림 화살표 위치
+
+
+.c91402010 .input-section dl {margin-left:200px;}
+.c91402010 .input-section dt {float:left; width:350px;font-size:14px;margin-top:7px;}
+.c91402010 .input-section dt b {color:#202020;}
+
+
+***************************************************************************
+*	회원가입 > 외국인인증 (메뉴코드 91403000)
+***************************************************************************
+
+.c91403000 div.cur-point {left:365px;.left:375px;} 현재 스탭 알림 화살표 위치
+
+.c91403000 form .name_txt {width:150px;}
+.c91403000 form .foreigner_no1 {width:110px;}
+.c91403000 form .foreigner_no2 {width:110px;}
+
+
+
+dd.foreigner{position:relative;}
+input.foreigner_no1{position:absolute;top:0;left:110px;}
+input.foreigner_no2{position:absolute;top:0;left:300px;}
+
+.mid-hyphen{position:absolute;top:15px;left:286px;}
+h4.margin-top40{margin-top:48px;}
+
+
+.private-info > .focus-info1{display:inline-block;width:931px;height:704px;position:absolute;top:0;left:0;background-color:transparent;}
+
+.service-policy{position:relative;}
+.service-policy > .focus-info2{display:inline-block;width:931px;height:3232px;position:absolute;top:0;left:0;background-color:transparent;}
+
+회원가입 수정 20150316
+.margin-top10.right form p * {vertical-align: top;}
+
+
+
+
+@charset "utf-8";
+***************************************************************************
+*   style_91.css		// 파일명 규칙 style_(page_code.substr(0,2)).css)
+*
+*	홈 > 회원가입 공통
+***************************************************************************
+
+
+div.mem-join-block {margin:0 auto;text-align:center;} 상단 현재 스탭
+div.mem-join-block ul {display:inline-block;*zoom:1;*display:inline; text-align:center;border-left:1px solid #ccc;} ie7 핵  display:inline-block -> *zoom:1;*display:inline;
+div.mem-join-block ul:first-child {border-left:0px;}
+div.mem-join-block ul.current-step li {color:#d75914;}
+
+회원 가입 상단 스탭 공통
+div.mem-join-block ul {margin:25px 0;padding:0px 0;text-align:center;color:#333;}
+div.mem-join-block ul li {font-size:26px;margin:-1px 0;font-family: 'NanumGothicBold';} margin:-2px 0; 은 라인 높이를 줄이기 위해 사용할수 있음
+div.mem-join-block ul li:first-child {font-size:18px;font-family: 'NanumGothicBold';;margin-bottom:5px;}
+div.mem-join-block h3,
+.mem-join-block .h3 {color:#d75914;} 현재 스탭 색 표시
+
+div.step3 ul {width:327px;} 상단 스텝
+div.step4 ul {width:240px;} 상단 스텝
+div.step5 ul {width:190px;} 상단 스텝
+
+.center-btn {text-align:center;} 버튼 중앙정렬
+
+해당 스탭 하단 설명공통
+h4 {font-size:20px;font-weight:600;color:#333;text-align:center;width:950px;margin:0 auto;}
+h4 span {text-decoration:underline;}
+.certifi-desc {font-size:14px;text-align:center;line-height:1.5em;}
+.certifi-desc p span {text-decoration:underline;} 설명 중 underline
+
+
+
+
+
+
+
+
+
+.arrow-up { 현재 스탭 알림 화살표 위치
+	width: 0; 
+	height: 0; 
+	border-left: 7px solid transparent;
+	border-right: 7px solid transparent;
+	
+	border-bottom: 7px solid #d0d0d0;
+}
+
+.arrow-down {
+	width: 0; 
+	height: 0; 
+	border-left: 20px solid transparent;
+	border-right: 20px solid transparent;
+	
+	border-top: 20px solid #f00;
+}
+
+.arrow-right {
+	width: 0; 
+	height: 0; 
+	border-top: 60px solid transparent;
+	border-bottom: 60px solid transparent;
+	
+	border-left: 60px solid green;
+}
+
+.arrow-left {
+	width: 0; 
+	height: 0; 
+	border-top: 10px solid transparent;
+	border-bottom: 10px solid transparent; 
+	
+	border-right:10px solid blue; 
+}
+
+@charset "utf-8";
+***************************************************************************
+*   style_9150.css
+*
+*	회원가입 > 회원가입폼 (메뉴코드 91500000)
+***************************************************************************
+body{background:#fff}
+body {*height:}ie7에서 body에 스크롤바가 생기는 문제 해결을 위해
+
+#header{height:50px;}
+.c91500000 div.cur-point {left:610px;.left:905px;} 현재 스탭 알림 화살표 위치
+.c91500000 div.cur-point.step5{left:681px;}
+
+
+.c91500000 .input-info {float:right;margin-top:50px;background: url('/Content/images/Member/essential_icon.png') no-repeat center left;padding-left:15px;} 
+
+
+
+.c91500000 div.input-box dt {margin-left:10px;padding:5px 0;padding-left:15px;width:100px;}
+.c91500000 div.input-box dt.essential {background: url('/Content/images/Member/essential_icon_s.png') no-repeat center left;}
+
+
+.c91500000 div.input-box .birth-year-select {width:80px;}
+.c91500000 div.input-box .birth-month-select,
+.c91500000 div.input-box .birth-day-select {width:50px;margin-left:5px;}
+
+
+
+.c91500000 div.input-box dd > input[type=radio]:first-child {margin-left:0;} 라디오 버튼이 처음오는 컬럼에서 마진 삭제
+
+.c91500000 div.input-box .id_txt {margin-right:7px;}
+
+.c91500000 div.input-box .email-select {width:120px;margin-right:5px;}
+.c91500000 div.input-box .email-front-txt {}
+.c91500000 div.input-box .email-end-txt {}
+.c91500000 div.input-box .email-at {margin-left:5px;}
+
+.c91500000 div.input-box .phone-first-select {}
+.c91500000 div.input-box .phone-mid-select {} 
+.c91500000 div.input-box .phone-end-select {}
+.c91500000 div.input-box .phone-width {width:60px;}
+
+
+.c91500000 div.input-box .addr-txt {width:350px;}
+.c91500000 div.input-box .job-select {}
+
+
+.c91500000 span.prime-addr {font-size:13px;color:#333;margin-left:15px;}
+
+
+***************************************************************************
+*   style_9150.css
+*
+*	회원가입 > 아이디 중복 팝업, 주소검색 팝업 (메뉴코드 91501000)
+***************************************************************************
+body.c91501000 { overflow-x:hidden;overflow-y:hidden; } 크롬, 오페라에서 팝업 시 스크롤 안생기게
+
+.c91501000 .input-section {margin:0px auto; width:340px;padding:60px 0;}
+.c91501000 .input-section p {font-size:12px;font-weight:600;}
+
+.c91501000 div.input-box dt {width:55px;}
+.c91501000 div.input-box input[type=text] {margin-right:10px; width:155px;}
+
+
+***************************************************************************
+*	회원가입 > 아이디 중복 팝업, 주소검색 팝업 (메뉴코드 91502000)
+***************************************************************************
+body.c91502000 {background:#fff;overflow-y:auto; overflow-x:hidden;overflow-y:hidden; } 크롬, 오페라에서 팝업 시 스크롤 안생기게
+
+.c91502000 .input-section {margin:0px auto; width:415px;padding:60px 0;}
+.c91502000 .input-section p {font-size:12px;font-weight:600;}
+
+.c91502000 div.input-box dt {width:95px;*margin-top:22px;} 읍/면/동 검색
+.c91502000 div.input-box input[type=text] {margin-right:10px; width:155px;}
+
+.c91502000 .result p span {text-decoration:underline;}
+.c91502000 .seperate-line {float:left;height:14px;margin-top:2px;*margin-top:1px;}
+
+.c91502000 .result table {width:410px;}
+.c91502000 .result table thead th {color:#333;background:#efefef;border-top:1px solid #999;border-bottom:1px solid #c9c9c9;}
+.c91502000 .result table thead th:first-child {width:105px;padding:10px 0;}
+.c91502000 .result table tbody {border-bottom:1px solid #ccc;}
+.c91502000 .result table tbody tr th {padding:15px 0;} 검색결과 없을때 표시
+.c91502000 .result table tbody tr td {padding:5px 0;padding-left:20px;} 주소
+.c91502000 .result table tbody tr td:first-child {padding-left:0;text-align:center;} 우편번호
+
+
+
+label.hide{position:absolute;}
+
+.page-box{width:414px;margin-top:30px;}
+.page-box > a{font-size: 12px;margin: 0 2px;}
+.page-box > a.prev > img{margin-right:3px;}
+.page-box > a.next > img{margin-left:3px;}
+
+
+#header > .popup-top-container > .popup-top > div.right{position:absolute;right:10px;}
+ 

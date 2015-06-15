@@ -2,7 +2,7 @@
 	pageEncoding="UTF-8"%>
 
 <style>
-@import url("<%=request.getContextPath()%>/cssPrimus/common.css");
+@import url("<%=request.getContextPath()%>/cssMovie/common.css");
 </style>
 
 <article>
@@ -197,16 +197,15 @@
 							<p>
 								<input type="radio" class="policy_agree_radio" id="service-policy" name="policy" value="true"> 
 								<label for="service-policy">동의</label> 
-								<input type="radio"	class="policy_agree_radio" id="service-policy_dag" name="policy" value="false"> <label for="service-policy_dag">미동의</label>
+								<input type="radio"	class="policy_agree_radio" id="service-policy_dag" name="policy" value="false"> 
+								<label for="service-policy_dag">미동의</label>
 							</p>
 							<p align="center">
-						<!-- 	<input type="submit" value="계속하기" /> -->
    						    <div class="center-btn margin-top40"><a href="memberJoin.jsp" id="a_auth_redirect" class="button h30 w100 gray " title="계속하기"><b>계속하기</b></a></div>
 
 						</form>
 						<br /><br /><br />
 					</div>
-
 				</div>
 			</div>
 		</div>

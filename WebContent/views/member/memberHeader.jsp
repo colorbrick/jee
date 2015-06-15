@@ -6,7 +6,7 @@
 	<meta charset="UTF-8" />
 	<title>영화관</title>
 	<style>
-		@import url("<%=request.getContextPath()%>/cssPrimus/common.css");
+		@import url("<%=request.getContextPath()%>/cssMovie/common.css");
 	</style>
 </head>
 <body>
@@ -14,12 +14,9 @@
 
 
 <div id="header">
-    <!-- top-container -->
     <div class="top-container">
             <div class="sub-bg"></div>
-        <!-- top -->
         <div class="top">	
-            <!-- 상단 menu -->
             <div id="logo">
                 <h3>로고 삽입</h3>
             </div>
@@ -36,11 +33,8 @@
                 </ul>
             </div>
 
-              <!-- //gnb -->
-            <!-- right -->
             <div class="right">
                 <div class="right-sub">
-                    <!-- login -->
                         <div id="login">
                             <dl class="logout">
                                 <dt><label for="user-id" class="user-id">ID</label></dt>
@@ -61,14 +55,11 @@
                     </div>
                 </div>
             </div>
-                <!-- //상단 menu -->
-            </div>
-            <!-- //top -->
+          </div>
         </div>
-        <!-- //top-container -->
     </div>
 	<article>
-		<section class="content">
+		<section>
 			<h3>콘텐츠</h3>
 		</section>
 	</article>
