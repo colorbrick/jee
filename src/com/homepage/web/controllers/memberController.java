@@ -26,86 +26,58 @@ import com.homepage.web.services.MemberService;
 public class memberController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	
-	Map<String,Object> map = new HashMap<String,Object>();
-	MemberBean bean = new MemberBean();
+	Map<String, Object> map = new HashMap<String, Object>();
 	MemberService service = new MemberServiceImpl();
+    MemberBean bean = new MemberBean();
 	
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		request.setCharacterEncoding("UTF-8");
-		String path = request.getServletPath();
-		switch (path) {
-		case "/model2/join.do" :
-			String id = request.getParameter("id");
-			String password = request.getParameter("password"); 
-			String name = request.getParameter("name"); 
-			String ageParam = request.getParameter("age");
-			int age = Integer.parseInt(ageParam);
-			String addr = request.getParameter("address");
-			bean.setAddr(addr);
-			bean.setAge(age);
-			bean.setId(id);
-			bean.setName(name);
-			bean.setPassword(password);
-			
-			service.join(id, password, name, age, addr);
-			RequestDispatcher dispatcher = request.getRequestDispatcher("/views/model2/memberForm.jsp");
-			dispatcher.forward(request, response);
-			break;
-			
-	/*		request.setAttribute("id", id);
-			request.setAttribute("password", password);
-			request.setAttribute("name", name);
-			request.setAttribute("age", age);
-			request.setAttribute("address", addr);*/
-			
-		case "/model2/login.do" :
-			String id2 = bean.getId();
-			String password2 = bean.getId();
-			String name2 = bean.getName();
-			int age2 = bean.getAge();
-			String addr2 = bean.getAddr();
-			
-
-			//service.login(id2, password2);
-			
-		
-			
-			String idx = service.login(id2, password2);
-			request.setAttribute("idx", idx);
-			String msg = "";
-			System.out.println(idx);
-			if(idx==1){
-				
-			}else if(idx==2){
-				msg ="입력하신 ID 는 존재하지 않거나, 일치하지 않습니다. 다시 입력해 주세요";
-			}else{
-				msg ="비번이 다릅니다.다시 입력하세요.";
-			}
-			
-			System.out.println(path);
-			switch (idx) {
-			case 1:
-				request.setAttribute("id", bean.getId());
-				request.setAttribute("password", password2);
-				request.setAttribute("name", name2);
-				request.setAttribute("age", age2);
-				request.setAttribute("address", addr2);
-				RequestDispatcher dispatcher2 = request.getRequestDispatcher("/views/model2/member.jsp");
-				dispatcher2.forward(request, response);
-				break;
-
-			case 2:
-				request.setAttribute("msg", msg);
-				 dispatcher2 = request.getRequestDispatcher("/views/model2/loginFail.jsp");
-				dispatcher2.forward(request, response);
-				break;
-			default:
-				request.setAttribute("msg", msg);
-				 dispatcher2 = request.getRequestDispatcher("/views/model2/loginFail.jsp");
-				dispatcher2.forward(request, response);
-				break;
-			}
-			break;
+		switch (request.getServletPath()) {
+		case "/model2/join.do":	goJoin(request, response); break;
+		case "/model2/login.do": goLogin(request, response); break;
+		default: break;
 		}
+	}
+	
+	
+	private void goJoin(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+
+		String name = request.getParameter("name");
+		String id = request.getParameter("id");
+		String password = request.getParameter("password");
+		String ageParam = request.getParameter("age");
+		String address = request.getParameter("address");
+		int age= Integer.parseInt(ageParam);
+		
+		bean.setName(name);
+		bean.setId(id);
+		bean.setPassword(password);
+		bean.setAge(age);
+		bean.setAddr(address);
+		
+		service.join(id, password, name, age, address);
+		
+		RequestDispatcher dispatcher = request.getRequestDispatcher("/views/model2/memberForm.jsp"); 
+		dispatcher.forward(request, response);
+	}
+	
+	private void goLogin(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		String id = request.getParameter("id");
+		String password = request.getParameter("password");
+		String msg = service.login(id, password);
+		if(msg.equals("환영합니다.")){
+			request.setAttribute("name", bean.getName());
+			request.setAttribute("id", bean.getId());
+			request.setAttribute("age", bean.getAge());
+			request.setAttribute("address", bean.getAddr());
+			
+			RequestDispatcher dispatcher = request.getRequestDispatcher("/views/model2/member.jsp");
+			dispatcher.forward(request, response);
+		}else{
+			request.setAttribute("msg", msg);
+			RequestDispatcher dispatcher = request.getRequestDispatcher("/views/model2/loginFail.jsp");
+			dispatcher.forward(request, response);
+		}
+		
 	}
 }

@@ -29,10 +29,8 @@ public class MemberServiceImpl implements MemberService {
 		map.put("id", bean.getId());
 		map.put("password", bean.getPassword());
 		map.put("name", bean.getName());
-		// 키와 밸류 패턴에서 밸류값을 String 으로 통일시키려고
-		// int 타입으로 들어온 age 를 String 타입으로 변환하였다.
 		map.put("age", String.valueOf(bean.getAge()));
-		map.put("addr", bean.getAddr());
+		map.put("address", bean.getAddr());
 		
 		/*
 		 * 1. 첫번째 에러 유형
@@ -76,15 +74,15 @@ public class MemberServiceImpl implements MemberService {
 		}*/
 		
 		String msg = "";
-		System.out.println("ID :" + map.get("id"));
-		if (!map.containsKey(id) || !(map.get("id").equals(id))) {
-			msg = "일치하는 ID가 없습니다.";
-		} else {
-			if(!(map.get("password").equals(password))){
-				msg = "환영합니다..";
-			}
+		if(map.get("id").equals(id)&& map.get("password").equals(password)){
+			return msg = "환영합니다.";
+		}else if(!(map.get("id").equals(id)||map.get("password").equals(password))){
+			return msg = "입력하신 ID, 패스워드 는 존재하지 않거나, 일치하지 않습니다. 다시 입력해 주세요.";
+		}else if(!(map.get("id").equals(id))&&map.get("password").equals(password)){
+			return msg = "입력하신 ID는 존재하지 않습니다.";
+		}else{
+			return msg = "비번이 다릅니다.다시 입력하세요.";
 		}
-		return msg;
 	}
 
 }
