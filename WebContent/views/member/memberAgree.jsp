@@ -8,8 +8,6 @@
 <article>
 	<div id="main-shortCut">
 		<div class="sub-main-section">
-			<!-- 컨텐츠 작성 -->
-
 			<div class="page-type3">
 				<h2>
 					<p>JOIN</p>
@@ -20,7 +18,6 @@
 			<div class="cirtifi-box">
 				<h4>개인정보수집 및 활용동의 (필수)</h4>
 				<div class="private-info">
-					<span class="focus-info1 have_table" tabindex="0"></span>
 					<table class="margin-top10 table_st1">
 						<colgroup>
 							<col width="30%">
@@ -57,7 +54,6 @@
 				
 				<h4>서비스 이용약관 (필수)</h4>
 				<div class="private-info">
-					<span class="focus-info1 have_table" tabindex="0"></span>
 					<table>
 							<tr>
 								<td>
