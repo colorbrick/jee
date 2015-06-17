@@ -9,17 +9,11 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-/**
- * Servlet implementation class MemberController
- */
+
 @WebServlet({"/member.do","/agree.do","/member/searchId.do"})
 public class MemberController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
-
-	/**
-	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
-	 */
 	
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 request.setCharacterEncoding("UTF-8");
@@ -34,13 +28,8 @@ request.setCharacterEncoding("UTF-8");
 			dispatcher2.forward(request, response);
 			break;*/
 		default: break;
-			
 		}
 	}
-
-
-	
-	
 	
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		request.setCharacterEncoding("UTF-8");
@@ -50,15 +39,7 @@ request.setCharacterEncoding("UTF-8");
 //		case "/agree.do" : goAgree(request, response);break;
 		default:
 			System.out.println("페이지 없음"); 	break;
-			
 		}
-		
-		
-		
-		
-		
-		
-		
 	}
 
 
@@ -87,37 +68,28 @@ request.setCharacterEncoding("UTF-8");
 	private void goMember(HttpServletRequest request,
 			HttpServletResponse response) throws ServletException, IOException {
 		String name = request.getParameter("name");
-		String birth = request.getParameter("birthday");
-		String birth_radio = request.getParameter("birth_radio");   // boolean 으로 받는 방법?
-		String gender_radio = request.getParameter("gender_radio");   // boolean 으로 받는 방법?
-		String id = request.getParameter("Id");
-		String password = request.getParameter("Password");
-		String password_conf = request.getParameter("Password_Conf");
+		String birthday = request.getParameter("birthday");
+		String birthdayRadio = request.getParameter("birthdayRadio");   // boolean 으로 받는 방법?
+		String genderRadio = request.getParameter("genderRadio");   // boolean 으로 받는 방법?
+		String userId = request.getParameter("userId");
+		String userPw = request.getParameter("userPw");
+		String userPwConf = request.getParameter("userPwConf");
 		String email = request.getParameter("email");
 		String phone = request.getParameter("phone");
 		
 		
 		request.setAttribute("name", name);
-		request.setAttribute("birth", birth);
-		request.setAttribute("birth_radio", birth_radio);
-		request.setAttribute("gender_radio", gender_radio);
-		request.setAttribute("id", id);
-		request.setAttribute("password", password);
-		request.setAttribute("password_Conf", password_conf);
+		request.setAttribute("birthday", birthday);
+		request.setAttribute("birthdayRadio", birthdayRadio);
+		request.setAttribute("genderRadio", genderRadio);
+		request.setAttribute("userId", userId);
+		request.setAttribute("userPw", userPw);
+		request.setAttribute("userPwConf", userPwConf);
 		request.setAttribute("email", email);
 		request.setAttribute("phone", phone);
 		
 		RequestDispatcher dispatcher = request.getRequestDispatcher("/views/member/memberGet.jsp");
 		dispatcher.forward(request, response);
 	}
-
-
-	   /**
-     * @see HttpServlet#HttpServlet()
-     */
-    public MemberController() {
-        super();
-        // TODO Auto-generated constructor stub
-    }
 
 }

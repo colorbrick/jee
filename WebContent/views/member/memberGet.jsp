@@ -9,12 +9,12 @@
 <body>
 	<div>
 		이름 : <%=request.getAttribute("name") %>	<br />
-		생일 : <%=request.getAttribute("birth") %><br />
-		양력/음력 : <%=request.getAttribute("birth_radio") %><br />	
-		남성/여성 : <%=request.getAttribute("gender_radio") %><br />
-		아이디 : <%=request.getAttribute("id") %><br />
-		비밀번호 : <%=request.getAttribute("password") %><br />
-		비밀번호 확인 : <%=request.getAttribute("password_Conf") %><br />
+		생일 : <%=request.getAttribute("birthday") %><br />
+		양력/음력 : <%=request.getAttribute("birthdayRadio") %><br />	
+		남성/여성 : <%=request.getAttribute("genderRadio") %><br />
+		아이디 : <%=request.getAttribute("userId") %><br />
+		비밀번호 : <%=request.getAttribute("userPw") %><br />
+		비밀번호 확인 : <%=request.getAttribute("userPwConf") %><br />
 		이메일 : <%=request.getAttribute("email") %><br />	
 		폰번호 : <%=request.getAttribute("phone") %><br />
 	
