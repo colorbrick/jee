@@ -22,7 +22,8 @@ import com.homepage.web.services.MemberService;
  * @ Author : 허성조;
  * @ Story : 회원가입과 로그인 담당하는 컨트롤러;
  */
-@WebServlet({"/model2/join.do","/model2/login.do"})
+@WebServlet({"/model2/join.do","/model2/login.do",
+			"/member/searchIdForm.do","/member/searchPassForm.do" })
 public class memberController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	
@@ -30,6 +31,24 @@ public class memberController extends HttpServlet {
 	MemberService service = new MemberServiceImpl();
     MemberBean bean = new MemberBean();
 	
+    
+    
+    protected void doGet(HttpServletRequest request, HttpServletResponse response)
+    		throws ServletException, IOException {
+		request.setCharacterEncoding("UTF-8");
+		switch (request.getServletPath()) {
+		case "/member/searchIdForm.do" : 
+			RequestDispatcher dispatcher = request.getRequestDispatcher("/views/model2/searchIdForm.jsp");
+			dispatcher.forward(request, response);
+			break;
+		case "/member/searchPassForm.do" : 
+			RequestDispatcher dispatcher2 = request.getRequestDispatcher("/views/model2/searchPassForm.jsp");
+			dispatcher2.forward(request, response);
+			break;
+		default: break;
+		}
+    }
+    
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		request.setCharacterEncoding("UTF-8");
 		switch (request.getServletPath()) {
@@ -38,6 +57,7 @@ public class memberController extends HttpServlet {
 		default: break;
 		}
 	}
+	
 	
 	
 	private void goJoin(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

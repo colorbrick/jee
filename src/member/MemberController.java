@@ -12,7 +12,7 @@ import javax.servlet.http.HttpServletResponse;
 /**
  * Servlet implementation class MemberController
  */
-@WebServlet({"/member.do","/agree.do"})
+@WebServlet({"/member.do","/agree.do","/member/searchId.do"})
 public class MemberController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
@@ -20,6 +20,28 @@ public class MemberController extends HttpServlet {
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
+	
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+request.setCharacterEncoding("UTF-8");
+		
+		switch (request.getServletPath()) {
+		case "/member/searchId.do" : 
+			RequestDispatcher dispatcher = request.getRequestDispatcher("/views/member/searchIdForm.jsp");
+			dispatcher.forward(request, response);
+			break;
+		/*case "/member/searchPass.do" : 
+			RequestDispatcher dispatcher2 = request.getRequestDispatcher("/views/member/searchPassForm.jsp");
+			dispatcher2.forward(request, response);
+			break;*/
+		default: break;
+			
+		}
+	}
+
+
+	
+	
+	
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		request.setCharacterEncoding("UTF-8");
 		
@@ -89,17 +111,7 @@ public class MemberController extends HttpServlet {
 		dispatcher.forward(request, response);
 	}
 
-	
-	
-	/**
-	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
-	 */
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-	}
 
-
-	
 	   /**
      * @see HttpServlet#HttpServlet()
      */

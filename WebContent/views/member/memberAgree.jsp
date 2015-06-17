@@ -4,6 +4,16 @@
 <style>
 @import url("<%=request.getContextPath()%>/cssMovie/common.css");
 </style>
+<script>
+	function policyNo() {
+		alert("약관 미동의시 회원가입을 하실 수 없습니다.", 
+			"policyNo",
+			"scrollbars, toolbar=no, location=no, directories=no,status=no, menubar=yes, resizable=yes, width=300, height=200, top=200, left=400" )
+		location.replace("memberHeader.jsp") 
+	}
+
+</script>
+
 
 <article>
 	<div id="main-shortCut">
@@ -193,8 +203,8 @@
 							<p>
 								<input type="radio" class="policy_agree_radio" id="service-policy" name="policy" value="true"> 
 								<label for="service-policy">동의</label> 
-								<input type="radio"	class="policy_agree_radio" id="service-policy_dag" name="policy" value="false"> 
-								<label for="service-policy_dag">미동의</label>
+								<input type="radio"	class="policy_agree_radio" id="service-policy_dag" name="policy" value="false" onclick="policydag()"> 
+								<label for="service-policy_dag" >미동의</label>
 							</p>
 							<p align="center">
    						    <div class="center-btn margin-top40"><a href="memberJoin.jsp" id="a_auth_redirect" class="button h30 w100 gray " title="계속하기"><b>계속하기</b></a></div>

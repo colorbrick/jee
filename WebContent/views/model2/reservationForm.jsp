@@ -105,5 +105,29 @@
 		<input type="submit" value="등록"/>
 	</form>
 	</div>
+	<div>
+		<form action="<%=request.getContextPath()%>/reservation/checkOut.do"> <!-- 웹프로그램과 연동하기 위한 태그 -->
+		
+		<fieldset>
+			<legend>취소 내용</legend>
+			<ol>  <!-- 순서 -->
+				<li>
+					<label for="prod">아이디</label>
+					<input type="text" name="id" id="id" placeholder="아이디를 입력하세요"/>
+				</li>
+				<li>
+					<label for="num">열 번호</label>
+					<input id= "floor" type="number" name="floor" min="1" max="3" value="1"/> 
+				</li>
+				<li>
+					<label for="num">행 번호</label>
+					<input id= "row" type="number" name="row" min="1" max="5" value="1"/> 
+				</li>
+			</ol>
+		</fieldset>
+		<input type="submit" value="등록"/>
+	</form>
+	</div>
+	
 </body>
 </html>

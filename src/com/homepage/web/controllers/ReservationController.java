@@ -34,10 +34,11 @@ public class ReservationController extends HttpServlet {
 		int row = Integer.parseInt(request.getParameter("row"))-1;
 		String id = request.getParameter("id");
 		String path = request.getServletPath();
-		seat[floor][row] = id;  // 좌석 위치값
+		
 				
 		switch (path) {
 		case "/reservation/checkIn.do":
+			seat[floor][row] = id;  // 좌석 위치값
 			String msg= service.checkIn(floor, row, id);
 			request.setAttribute("msg", msg);
 			request.setAttribute("seat", seat);
@@ -46,7 +47,10 @@ public class ReservationController extends HttpServlet {
 			break; // 체크인
 		case "/reservation/checkOut.do":
 			String msg2= service.checkOut(floor, row, id);
-			RequestDispatcher dispatcher2 = request.getRequestDispatcher("");
+			seat[floor][row] = null;  // 좌석 위치값
+			request.setAttribute("msg", msg2);
+			request.setAttribute("seat", seat);
+			RequestDispatcher dispatcher2 = request.getRequestDispatcher("/views/model2/reservationForm.jsp");
 			dispatcher2.forward(request, response);
 			break; // 체크아웃
 		/*case "/reservation/inputCheck.do":

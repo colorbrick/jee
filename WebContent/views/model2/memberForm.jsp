@@ -10,6 +10,20 @@
 	</style>
 
 <script type="text/javascript">
+	function searchId() {
+		window.open("<%=request.getContextPath()%>/member/searchIdForm.do",
+		"searchId",
+		"scrollbars, toolbar=no, location=no, directories=no,status=no, menubar=yes, resizable=yes, width=600, height=500, top=200, left=400");
+
+	}
+	function searchPass() {
+		window.open("<%=request.getContextPath()%>/member/searchPassForm.do",
+		"searchPass",
+		"scrollbars, toolbar=no, location=no, directories=no,status=no, menubar=yes, resizable=yes, width=600, height=500, top=200, left=400");
+		alert("경고경고");
+	}
+
+
 	function join() {
 			document.frmJoin.submit();
 	}
@@ -94,5 +108,14 @@
 			</table>	
 		</fieldset>
 	</form>
+	<div>
+		<span>
+		<a href="#" onclick="searchId()">아이디 찾기</a>
+		</span>
+		<span>
+		<a href="#" onclick="searchPass()">비밀번호 찾기</a>
+		</span>
+	</div>
+	
 </body>
 </html>
