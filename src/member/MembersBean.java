@@ -1,6 +1,6 @@
 package member;
 
-public class MemberBean {
+public class MembersBean {
 
 	private String name;
 	private String birthday;

@@ -48,8 +48,8 @@
                                     <dt class="dt-valign-top">
                                         <label for="genderRadio">성별</label></dt>
                                     <dd>
-                                        <input name="genderRadio" title="남성" class="radio-common" id="gender_male" type="radio"  value="남자"><label for="gender_male">남성</label>
-                                        <input name="genderRadio" title="여성" class="radio-common" id="gender_female" type="radio" value="여자"><label for="gender_female">여성</label>
+                                        <input name="gender" title="남성" class="radio-common" id="gender_male" type="radio"  value="남자"><label for="gender_male">남성</label>
+                                        <input name="gender" title="여성" class="radio-common" id="gender_female" type="radio" value="여자"><label for="gender_female">여성</label>
                                     </dd>
                                 </dl>
                                 <div class="line-e2e2e2"></div>

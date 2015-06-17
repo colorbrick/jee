@@ -201,9 +201,9 @@
 					<div class="margin-top10 left">
 						<form action="<%=request.getContextPath()%>/agree.do" method="post" >
 							<p>
-								<input type="radio" class="policy_agree_radio" id="service-policy" name="policy" value="true"> 
+								<input type="radio" class="policy_agree_radio" id="service-policy" name="policy" value="true" checked="checked"> 
 								<label for="service-policy">동의</label> 
-								<input type="radio"	class="policy_agree_radio" id="service-policy_dag" name="policy" value="false" onclick="policydag()"> 
+								<input type="radio"	class="policy_agree_radio" id="service-policy_dag" name="policy" value="false" onclick="policyNo()"> 
 								<label for="service-policy_dag" >미동의</label>
 							</p>
 							<p align="center">

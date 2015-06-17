@@ -38,6 +38,7 @@
 			"scrollbars, toolbar=no, location=no, directories=no,status=no, menubar=yes, resizable=yes, width=300, height=200, top=200, left=400" )
 	}
 	function send(){     
+        
         document.loginForm.submit();
     }
 
@@ -78,7 +79,6 @@
                                 <dd><div class="input-wrapper"><input type="password" id="userPw" title="비밀번호 입력" name="userPw"></div></dd>
                             </dl>
                             <a class="img-logout" id="aCommonLogin" href="javascript_:send();" title="로그인"><span>로그인&nbsp;</span></a>
-  <!--                           <input type="submit" value="로그인" /> -->
                             <a class="img-logout" id="aCommonFINDPWD" href="#" title="아이디/비밀번호 찾기" onclick="searchId()"><span>아이디/비밀번호찾기 </span></a> 
                     </div>                  
                     <div id="link">

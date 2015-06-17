@@ -77,7 +77,7 @@ public class memberController extends HttpServlet {
 		
 		service.join(id, password, name, age, address);
 		
-		RequestDispatcher dispatcher = request.getRequestDispatcher("/views/model2/memberForm.jsp"); 
+		RequestDispatcher dispatcher = request.getRequestDispatcher("/views/model2/member.jsp"); 
 		dispatcher.forward(request, response);
 	}
 	

@@ -6,7 +6,7 @@ import java.util.Map;
 
 public class MemberServiceImpl implements MemberService {
 
-	MemberBean bean = new MemberBean();
+	MembersBean bean = new MembersBean();
 	Map<String,Object> map = new HashMap<String,Object>();
 	
 	@Override
