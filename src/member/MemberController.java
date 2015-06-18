@@ -136,8 +136,7 @@ request.setCharacterEncoding("UTF-8");
 			
 		}else{
 			request.setAttribute("msg", msg);
-			
-			RequestDispatcher dispatcher = request.getRequestDispatcher("/views/member/memberHeaderFail.jsp");
+			RequestDispatcher dispatcher = request.getRequestDispatcher("/views/model2/loginFail.jsp");
 			dispatcher.forward(request, response);
 		}
 		

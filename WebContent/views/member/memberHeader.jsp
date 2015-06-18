@@ -33,13 +33,26 @@
 			"scrollbars, toolbar=no, location=no, directories=no,status=no, menubar=yes, resizable=yes, width=300, height=200, top=200, left=400" )
 	}
 	function custom() {
-		alert("문의 내용을 admin@cinema.com 으로 발송해주세요.", 
+		alert("문의 내용은 admin@cinema.com 으로 발송해주세요.", 
 			"custom",
 			"scrollbars, toolbar=no, location=no, directories=no,status=no, menubar=yes, resizable=yes, width=300, height=200, top=200, left=400" )
 	}
 	function send(){     
         document.loginForm.submit();
     }
+	
+	function formChk(){
+	    if(document.loginForm.userId.value==''){
+	      alert("아이디를 입력해주세요.");
+	      document.loginForm.userId.focus();
+	    }else if(document.loginForm.userPw.value==''){
+	      alert("비밀번호를 입력해주세요.");    
+	      document.loginForm.userPw.focus();
+	    }else{
+	       document.loginForm.submit(); 
+	       return true;
+	    }
+	}
 
 </script>
 </head>
@@ -77,7 +90,7 @@
                                 <dt><label for="userPw" class="user-pw">PW</label></dt>
                                 <dd><div class="input-wrapper"><input type="password" id="userPw" title="비밀번호 입력" name="userPw"></div></dd>
                             </dl>
-                            <a class="img-logout" id="aCommonLogin" href="javascript_:send();" title="로그인"><span>로그인&nbsp;</span></a>
+                            <a class="img-logout" id="aCommonLogin" href="#" title="로그인" onClick="javascript:formChk()"><span>로그인&nbsp;</span></a>
   <!--                           <input type="submit" value="로그인" /> -->
                             <a class="img-logout" id="aCommonFINDPWD" href="#" title="아이디/비밀번호 찾기" onclick="searchId()"><span>아이디/비밀번호찾기 </span></a> 
                     </div>                  
@@ -107,6 +120,9 @@
 		비밀번호 확인 : <%=request.getAttribute("userPwConf") %><br />
 		이메일 : <%=request.getAttribute("email") %><br />	
 		폰번호 : <%=request.getAttribute("phone") %><br /></h3>
+		<br /><br />
+		
+		<%-- <font style="color: red; font-size: 30px; ">로그인 성공/실패 : <%=request.getAttribute("msg") %></font> --%>
 		
 		
 		</section>

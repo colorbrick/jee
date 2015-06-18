@@ -107,6 +107,7 @@
 		비밀번호 확인 : <%=request.getAttribute("userPwConf") %><br />
 		이메일 : <%=request.getAttribute("email") %><br />	
 		폰번호 : <%=request.getAttribute("phone") %><br /></h3>
+		<br /><br />
 		
 		
 		</section>
