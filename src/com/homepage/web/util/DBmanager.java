@@ -6,19 +6,14 @@ import java.util.Properties;
 
 import oracle.jdbc.OracleDriver;
 
-public class DbManager {
+public class DBmanager {
 	public static Connection getConnection(){
 		Connection conn = null;
-		OracleDriver od = new OracleDriver();
-		Properties info = new Properties();
-		
-		info.put("user", "movie");
-		info.put("password", "movie");
 		
 		try {
 			Class.forName("oracle.jdbc.OracleDriver");
-			String url = "jdbc:oracle:thin:@127.0.0.1:1521:xe";
-			conn = DriverManager.getConnection(url,"movie","movie");
+			String url = "jdbc:oracle:thin:@localhost:1521:xe";
+			conn = DriverManager.getConnection(url,"system","oracle");
 		} catch (Exception e) {
 			e.printStackTrace();
 			System.out.println("DBmanager 에게서 에러가 났음");

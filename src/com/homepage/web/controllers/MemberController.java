@@ -1,7 +1,9 @@
 package com.homepage.web.controllers;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 import javax.servlet.RequestDispatcher;
@@ -23,12 +25,13 @@ import com.homepage.web.services.MemberService;
  * @ Story : 회원가입과 로그인 담당하는 컨트롤러;
  */
 @WebServlet({"/model2/join.do","/model2/login.do",
-			"/member/searchIdForm.do","/member/searchPassForm.do" })
-public class memberController extends HttpServlet {
+			"/member/searchIdForm.do","/member/searchPassForm.do",
+			"/member/searchAllMembers.do"})
+public class MemberController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	
 	Map<String, Object> map = new HashMap<String, Object>();
-	MemberService service = new MemberServiceImpl();
+	MemberService service = MemberServiceImpl.getInstance();
     MemberBean bean = new MemberBean();
 	
     
@@ -44,6 +47,14 @@ public class memberController extends HttpServlet {
 		case "/member/searchPassForm.do" : 
 			RequestDispatcher dispatcher2 = request.getRequestDispatcher("/views/model2/searchPassForm.jsp");
 			dispatcher2.forward(request, response);
+			break;
+		case "/member/searchAllMembers.do" :
+			List<MemberBean> list = new ArrayList<MemberBean>();
+			list = service.getList();
+			
+			request.setAttribute("memberList", list);
+			RequestDispatcher dispatcher3 = request.getRequestDispatcher("/views/model2/memberList.jsp");
+			dispatcher3.forward(request, response);
 			break;
 		default: break;
 		}
@@ -65,19 +76,26 @@ public class memberController extends HttpServlet {
 		String name = request.getParameter("name");
 		String id = request.getParameter("id");
 		String password = request.getParameter("password");
-		String ageParam = request.getParameter("age");
+		String email = request.getParameter("email");
 		String address = request.getParameter("address");
-		int age= Integer.parseInt(ageParam);
+		
 		
 		bean.setName(name);
 		bean.setId(id);
 		bean.setPassword(password);
-		bean.setAge(age);
+		bean.setEmail(email);
 		bean.setAddr(address);
 		
-		service.join(id, password, name, age, address);
+		int result = service.join(bean);
+		String joinMsg = "";
+		if (result !=0) {
+			joinMsg = name + "님 환영합니다.";
+		} else {
+			joinMsg = "회원가입에 실패했습니다.";
+		}
+		request.setAttribute("msg", joinMsg);
 		
-		RequestDispatcher dispatcher = request.getRequestDispatcher("/views/model2/member.jsp"); 
+		RequestDispatcher dispatcher = request.getRequestDispatcher("/views/model2/main.jsp"); 
 		dispatcher.forward(request, response);
 	}
 	

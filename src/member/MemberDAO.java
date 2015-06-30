@@ -1,6 +1,7 @@
 package member;
 
 import java.sql.Connection;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
@@ -11,10 +12,29 @@ import javax.naming.InitialContext;
 import javax.naming.NamingException;
 import javax.sql.DataSource;
 
+import com.homepage.web.bean.MemberBean;
+import com.homepage.web.util.DBmanager;
+
 import oracle.jdbc.OracleDriver;
 
 public class MemberDAO {
+	Connection conn = null;
+	PreparedStatement pstmt = null;
+	Statement stmt = null;
+	ResultSet rs = null;
+	String sql = "";
+	MemberBean bean = new MemberBean();
 	
+	// SINGLETON 적용
+	private static MemberDAO memberDAO = new MemberDAO();
+	private MemberDAO() {
+		conn = DBmanager.getConnection();
+	}
+	public static MemberDAO getInstance(){
+		return memberDAO;
+	}
+
+	// DBCP 적용
 	public Connection getConnection() throws NamingException, SQLException{
 		Connection conn = null;
 		Context initContext = new InitialContext();
@@ -23,6 +43,7 @@ public class MemberDAO {
 		conn = ds.getConnection();
 		return conn;
 	}
+	
 	
 	public static void main(String[] args) {
 		Connection conn = null;
